@@ -41,6 +41,7 @@ RUN cat service.conf >> /etc/systemd/system/tomcat.service
 # mod_jk conf files
 #ADD mod_jk.conf /etc/apache2/conf.d/
 ADD workers.properties /etc/apache2/conf.d/
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 EXPOSE 80
 
